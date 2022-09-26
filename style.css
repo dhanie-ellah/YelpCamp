@@ -1,0 +1,529 @@
+:root{
+     --light-bg: #f9f6f1;
+     --grey-text: #615d5a;
+     --input-bg: #f7f7f7;
+     --placeholder-text: #c3c3c3;
+     --blue: #1499c6;
+}
+
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Archivo';
+}
+
+/* INDEX.HTML STYLING */
+body{
+     width: 100%;
+}
+.landing-page{
+     display: flex;
+     width: 100%;
+     min-height: 100vh;
+}
+.landing-page .left{
+     width: 55%;
+     padding: 25px 145px;
+     background-color: var(--light-bg);
+}
+.landing-page .left .logo{
+     margin-bottom: 75px;
+}
+.landing-page .left h1{
+     font-size: 50px;
+     margin-bottom: 10px;
+}
+.landing-page .left p{
+     color: var(--grey-text);
+}
+.landing-page .left p:nth-child(3){
+     line-height: 22px;
+     margin-bottom: 10px;
+}
+.landing-page .left .checks{
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     margin-bottom: 30px;
+}
+.landing-page .left .check{
+     display: flex;
+     gap: 5px;
+     align-items: center;
+}
+.landing-page .left a{
+     background-color: black;
+     color: white;
+     border-radius: 4px;
+     padding: 10px;
+     text-decoration: none;
+}
+.landing-page .left p:nth-child(6){
+     margin-top: 45px;
+}
+.landing-page .right{
+     width: 45%;
+     /* min-height: 100vh; */
+     background: url(./Assets/Hero-Image.jpg);
+     background-repeat: no-repeat;
+     background-position: bottom;
+     background-size: cover;
+}
+/* SIGNIN/SIGNUP */
+.account{
+     display: flex;
+     min-height: 100vh;
+}
+.account .left{
+     width: 60%;
+     margin-top: 25px;
+}
+.account .left .left-content{
+     width: 70%;
+     margin: auto;
+}
+.account .left .left-content header{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 100px;
+}
+.account .left .left-content h1{
+     margin-bottom: 30px;
+}
+.account .left .left-content header a{
+     text-decoration: none;
+     color: var(--grey-text);
+}
+.account .left .left-content form label{
+     color: var(--grey-text);
+}
+.account .left .left-content form input{
+     width: 100%;
+     border: none;
+     outline: none;
+     background-color: var(--input-bg);
+     padding: 15px;
+     margin: 12px 0;
+}
+.account .left .left-content form input::placeholder{
+     color: var(--placeholder-text);
+}
+.account .left .left-content form input[type='submit']{
+     outline: none;
+     background-color: black;
+     color: white;
+     text-align: center;
+     padding: 14px;
+     border-radius: 3px;
+}
+.account .left .left-content p{
+     color: var(--grey-text);
+     font-size: 14px;
+}
+.account .left .left-content p a{
+     color: var(--blue);
+}
+.account .right{
+     width: 40%;
+     display: flex;
+     align-items: center;
+     justify-items: center;
+     background-color: var(--light-bg);
+}
+.account .right .right-content{
+     width: 50%;
+     margin: auto;
+}
+.account .right .right-content > h4{
+     font-size: 20px;
+     line-height: 28px;
+     margin-bottom: 15px;
+}
+.account .right .right-content .person{
+     display: flex;
+     align-items: center;
+     gap: 5px;
+}
+.account .right .right-content .person div{
+     display: flex;
+     flex-direction: column;
+     gap: 3px;
+}
+.account .right .right-content .person div p{
+     color: var(--grey-text);
+}
+/* CAMPGROUNDS.HTML */
+.campgrounds{
+     padding: 25px 125px;
+}
+.campgrounds header{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-bottom: 45px;
+}
+.campgrounds header a{
+     text-decoration: none;
+     color: var(--grey-text);
+}
+.campgrounds header .create{
+     background-color: black;
+     color: white;
+     padding: 12px 22px;
+     border-radius: 3px;
+}
+.campgrounds header .left{
+     display: flex;
+     align-items: center;
+     gap: 20px;
+}
+.campgrounds header .right{
+     display: flex;
+     align-items: center;
+     gap: 20px;
+}
+.campgrounds .welcome{
+     background-color: var(--light-bg);
+     padding: 55px 45px;
+     margin-bottom: 25px;
+}
+.campgrounds .welcome-content{
+     width: 38%;
+}
+.campgrounds .welcome-content h1{
+     margin-bottom: 10px;
+}
+.campgrounds .welcome-content p{
+     color: var(--grey-text);
+     line-height: 22px;
+     margin-bottom: 8px;
+}
+.campgrounds .welcome-content form{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-bottom: 10px;
+}
+.campgrounds .welcome-content form .search{
+     position: relative;
+     width: 70%;
+}
+.campgrounds .welcome-content form .search input{
+     width: 100%;
+     border-radius: 4px;
+     padding: 17px;
+     padding-left: 35px;
+     border: none;
+     outline: none;
+}
+.campgrounds .welcome-content form .search img{
+     position: absolute;
+     top: 32%;
+     left: 10px;
+}
+.campgrounds .welcome-content form > input{
+     width: 25%;
+     background-color: black;
+     color: white;
+     border-radius: 4px;
+     padding: 17px;
+     border: none;
+     outline: none;
+}
+.campgrounds .welcome-content a{
+     color: var(--grey-text);
+}
+.campgrounds .campgrounds-body{
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 25px;
+     margin-bottom: 75px;
+}
+.campgrounds .campgrounds-body .campground{
+     width: 32%;
+     border-radius: 3px;
+     border: 1px solid var(--placeholder-text);
+     padding: 20px;
+     margin-bottom: 15px;
+}
+.campgrounds .campground img{
+     width: 100%;
+     margin-bottom: 15px;
+     border-radius: 2px;
+}
+.campgrounds .campground h4{
+     margin-bottom: 15px;
+}
+.campgrounds .campground p{
+     color: var(--grey-text);
+     margin-bottom: 18px;
+     line-height: 22px;
+}
+.campgrounds .campground button{
+     width: 100%;
+     padding: 15px;
+     font-weight: 700;
+     font-size: 16px;
+     background: transparent;
+     border-radius: 3px;
+     border: 1px solid var(--placeholder-text);
+}
+/* HEADER */
+.header header {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-bottom: 45px;
+}
+.header header a {
+     text-decoration: none;
+     color: var(--grey-text);
+}
+.header header .create {
+     background-color: black;
+     color: white;
+     padding: 12px 22px;
+     border-radius: 3px;
+}
+.header header .left {
+     display: flex;
+     align-items: center;
+     gap: 20px;
+}
+.header header .right {
+     display: flex;
+     align-items: center;
+     gap: 20px;
+}
+/* INDIVIDUAL CAMPGROUND */
+.individual{
+     padding: 25px 125px;
+}
+.individual .body{
+     display: flex;
+     gap: 75px;
+     margin-bottom: 75px;
+}
+.individual .body .left{
+     width: 30%;
+     padding: 25px;
+     border-radius: 3px;
+     border: 1px solid var(--placeholder-text);
+     height: fit-content;
+}
+.individual .body .left img{
+     width: 100%;
+}
+.individual .body .right{
+     width: 70%;
+}
+.individual .body .right .first,
+.individual .body .right .second{
+     width: 100%;
+     padding: 25px;
+     border-radius: 3px;
+     border: 1px solid var(--placeholder-text);
+     margin-bottom: 25px;
+}
+.individual .body .right .first img{
+     width: 100%;
+     margin-bottom: 15px;
+}
+.individual .body .right .first .flex{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 10px;
+}
+.individual .body .right .first p,
+.individual .body .right .first i{
+     color: var(--grey-text);
+     line-height: 22px;
+     margin-bottom: 15px;
+}
+.individual .body .right .second .row .flex{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 15px;
+}
+.individual .body .right .second .row .flex p{
+     color: var(--grey-text);
+}
+.individual .body .right .second hr,
+.individual .body .right .second .row .paragraph{
+     margin-bottom: 30px;
+     color: var(--grey-text);
+}
+.individual .body .right .second hr{
+     border: none;
+     outline: none;
+     background-color: var(--placeholder-text);
+     height: 1px;
+}
+.individual .body .right .second .link{
+     display: flex;
+     justify-content: flex-end;
+}
+.individual .body .right .second a{
+     width: fit-content;
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+     gap: 5px;
+     text-decoration: none;
+     color: white;
+     background-color: black;
+     padding: 12px;
+     border-radius: 3px;
+     font-size: 14px;
+}
+.individual .body .right .second a img{
+     width: 15%;
+}
+/* ADD NEW CAMPGROUND */
+.add-campground{
+     padding: 55px 125px;
+}
+.add-campground .body{
+     width: 45%;
+     margin: auto;
+     margin-bottom: 50px;
+}
+.add-campground .body h1{
+     margin-bottom: 25px;
+}
+.add-campground .body label{
+     color: var(--grey-text);
+     font-size: 12px;
+}
+.add-campground .body input,
+.add-campground .body textarea{
+     width: 100%;
+     padding: 12px;
+     margin-top: 5px;
+     margin-bottom: 15px;
+     border: none;
+     outline: none;
+     background-color: var(--input-bg);
+     border-radius: 3px;
+     color: var(--placeholder-text);
+     line-height: 22px;
+     resize: none;
+}
+.add-campground .body input[type='submit']{
+     background-color: black;
+     color: white;
+}
+.add-campground .body input::placeholder{
+     color: var(--placeholder-text);
+     font-size: 12px;
+}
+
+/* TABLET VIEW */
+@media (max-width: 1000px){
+     /* INDEX.HTML */
+     .landing-page{
+          flex-direction: column-reverse;
+     }
+     .landing-page .left{
+          width: 100%;
+          padding: 25px;
+     }
+     .landing-page .right{
+          background: url(./Assets/Hero-Image-Tablet-and-Mobile.jpg);
+          width: 100%;
+          height: 45vh;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+     }
+     /* SIGNIN/SIGNUP */
+     .account{
+          flex-direction: column;
+     }
+     .account .left{
+          width: 100%;
+          margin-bottom: 50px;
+     }
+     .account .right{
+          width: 100%;
+          padding: 125px;
+     }
+     .account .right .right-content{
+          width: 95%;
+     }
+     /* CAMPGROUNDS */
+     .campgrounds {
+          padding: 45px;
+     }
+     .campgrounds .welcome-content{
+          width: 55%;
+     }
+     .campgrounds .campgrounds-body .campground {
+          width: 49%;
+     }
+     /* INDIVIDUAL CAMPGROUND */
+     .individual {
+          padding: 25px;
+     }
+     .individual .body {
+          display: flex;
+          flex-direction: column-reverse;
+          gap: 25px;
+     }
+     .individual .body .left {
+          width: 100%;
+     }    
+     .individual .body .right {
+          width: 100%;
+     }
+     /* ADD NEW CAMPGROUND */
+     .add-campground {
+          padding: 55px 50px;
+     }
+     .add-campground .body {
+          width: 80%;
+          margin-left: 0;
+          margin-bottom: 75px;
+     }
+}
+
+/* MOBILE VIEW */
+@media (max-width: 690px){
+     /* SIGNIN/SIGNUP */
+     .account .left .left-content{
+          width: 90%;
+     }
+     .account .right{
+          padding: 100px 25px;
+     }
+     /* CAMPGROUNDS */
+     .campgrounds {
+          padding: 25px;
+     }
+     .campgrounds .welcome{
+          padding: 55px 25px;
+     }
+     .campgrounds .welcome-content {
+          width: 100%;
+     }
+     .campgrounds .campgrounds-body .campground {
+          width: 100%;
+     }
+     /* INDIVIDUAL CAMPGROUND */
+     /* ADD NEW CAMPGROUND */
+     .add-campground {
+          padding: 55px 25px;
+     }
+     .add-campground .body {
+          width: 100%;
+          margin-left: 0;
+          margin-bottom: 75px;
+     }
+}
