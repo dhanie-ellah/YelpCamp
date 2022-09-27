@@ -16,14 +16,19 @@
 <body>
      <div class="campgrounds">
           <header>
-               <div class="left">
-                    <img src="./Assets/Logo.svg" alt="">
-                    <a href="index.html">Home</a>
+               <img src="./Assets/Logo.svg" class="logo-block">
+               <div class="links">
+                    <div class="left">
+                         <img src="./Assets/Logo.svg" alt="">
+                         <a href="index.html">Home</a>
+                    </div>
+                    <div class="right">
+                         <a href="signIn.html">Login</a>
+                         <a href="signUp.html" class="create">Create an account</a>
+                    </div>
                </div>
-               <div class="right">
-                    <a href="signIn.html">Login</a>
-                    <a href="signUp.html" class="create">Create an account</a>
-               </div>
+               <img src="./Assets/Hamburger-Menu.svg" class="menu">
+               <img src=".//Assets/Close.svg" class="close">
           </header>
           <div class="welcome">
                <div class="welcome-content">
@@ -45,7 +50,7 @@
                          <img src="./Assets/Camp Images/Compressed Images/Mount Ulap.jpg" alt="">
                          <h4>Mount Ulap</h4>
                          <p>One of the most famous hikes in Benguet is Mt Ulap in Itogon.</p>
-                         <button>View Campground</button>
+                         <button onclick="window.location='campground.html';">View Campground</button>
                     </div>
                     <div class="campground">
                          <img src="./Assets/Camp Images/Compressed Images/Calaguas Island.jpg" alt="">
