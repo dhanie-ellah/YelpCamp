@@ -25,11 +25,12 @@
                          <a href="search.html">&leftarrow; Back to campgrounds</a>
                     </header>
                     <h1>Start exploring camps from all around the world.</h1>
-                    <form action="">
+                    <form name="signUp" id="signup-form">
                          <label for="Username">Username</label>
-                         <input type="text" placeholder="johndoe_91">
+                         <input type="text" placeholder="johndoe_91" name="Username" id="signup-username">
                          <label for="Password">Password</label>
-                         <input type="password" placeholder="Choose Password">
+                         <input type="password" placeholder="Choose Password" name="Password" id="signup-password">
+                         <p id="signup-error"></p>
                          <input type="submit" value="Create an account">
                     </form>
                     <p>Already a user? <a href="signIn.html">Sign in</a></p>
