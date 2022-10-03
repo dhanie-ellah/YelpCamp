@@ -40,6 +40,7 @@ const signupPassword = document.getElementById('signup-password')
 const signinPassword = document.getElementById('signin-password')
 const signupError = document.getElementById('signup-error')
 const signinError = document.getElementById('signin-error')
+let userDatas = JSON.parse(localStorage.getItem("userDatas")) || []
 
 signupForm.addEventListener('submit', (event) => {
      event.preventDefault()
@@ -52,7 +53,6 @@ signupForm.addEventListener('submit', (event) => {
                Username: signupUsername.value,
                Password: signupPassword.value
           }
-          let userDatas = JSON.parse(localStorage.getItem("userDatas")) || []
           userDatas.push(userData)
           localStorage.setItem("userDatas", JSON.stringify(userDatas))
           window.location = 'signIn.html'
