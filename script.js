@@ -40,20 +40,21 @@ const signupPassword = document.getElementById('signup-password')
 const signinPassword = document.getElementById('signin-password')
 const signupError = document.getElementById('signup-error')
 const signinError = document.getElementById('signin-error')
-let userDatas = []
 
 signupForm.addEventListener('submit', (event) => {
      event.preventDefault()
      if (signupUsername.value === '' || signupPassword.value === '') {
           signupError.innerHTML = 'Field cannot be empty'
           signupError.style.color = 'red'
-          signupError.style.fontWeight = '700'
+          signupError.style.fontWeight = '600'
      } else {
           let userData = {
                Username: signupUsername.value,
                Password: signupPassword.value
           }
+          let userDatas = JSON.parse(localStorage.getItem("userDatas")) || []
           userDatas.push(userData)
+          localStorage.setItem("userDatas", JSON.stringify(userDatas))
           window.location = 'signIn.html'
      }
 })
@@ -61,14 +62,14 @@ signupForm.addEventListener('submit', (event) => {
 signinForm.addEventListener('submit', (event) => {
      event.preventDefault()
      for (let i = 0; i < userDatas.length; i++) {
-          if (signinUsername.value === '' || signinPassword.value === '') {
+          if (signinUsername.value === userDatas[i].Username && signinPassword.value === userDatas[i].Password) {
+               window.location = 'search.html'
+          } else if (signinUsername.value === '' || signinPassword.value === '') {
                signinError.innerHTML = 'Field cannot be empty'
                signinError.style.color = 'red'
-               signinError.style.fontWeight = '700'
-          } else if(signinUsername.value !== userDatas[i].Username || signinPassword.value !== userDatas[i].Password) {
-               signinError.innerHTML = "Username and Password doesn't match"
-          } else if (signinUsername.value === userDatas[i].Username && signinPassword.value === userDatas[i].Password){
-               window.location = 'search.html'
+               signinError.style.fontWeight = '600'
+          } else if (signinUsername.value !== userDatas[i] || signinPassword.value !== userDatas[i].Password) {
+               signinError.innerHTML = 'Username and password do not match'
           }
      }
 })
